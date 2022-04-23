@@ -13,7 +13,7 @@ Resources:
       Timeout: 3
       Role: 'arn:aws:iam::459727908782:role/enrich_movies_role'
       Events:
-        SQS1:
+        SQSTrigger:
           Type: SQS
           Properties:
             Queue:
