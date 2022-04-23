@@ -3,8 +3,7 @@ import boto3
 
 """
 Since handling data inconsistencies is out of scope, I'm giving precedence to
-the data from the omdb API in case of duplicates/related fields. 
-
+the data from the omdb API in case of duplicates/related fields.
 """
 keys_to_remove = ['title', 'imdbID', 'image', 'crew', 'year','imDbRatingCount', 
 'imDbRating']

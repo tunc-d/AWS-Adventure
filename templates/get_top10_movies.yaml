@@ -5,7 +5,7 @@ Resources:
   gettop10movies:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: lambda_function.lambda_handler
+      Handler: get_data.py.get_data_and_queue_message
       Runtime: python3.9
       CodeUri: "s3://get-code/get_top10_movies-0a8d769a-7d4a-4982-889e-0bc5436c7988.zip"
       Description: ''

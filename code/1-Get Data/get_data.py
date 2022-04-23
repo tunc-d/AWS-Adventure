@@ -34,5 +34,5 @@ def queue_message(content):
     }
 
 
-def lambda_handler(event, context):
+def get_data_and_queue_message(event, context):
     return queue_message(get_top_10())

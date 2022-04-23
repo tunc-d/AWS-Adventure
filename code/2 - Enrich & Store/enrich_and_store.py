@@ -3,7 +3,7 @@ import urllib3
 from helpers import * 
 
 
-def lambda_handler(event, context):
+def handle_sqs_event(event, context):
     http = urllib3.PoolManager()
     top10_films_raw = event['Records'][0]['body']
     top10_films = json.loads(top10_films_raw)
