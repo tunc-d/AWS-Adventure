@@ -1,0 +1,14 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Create SQS queue for sending and receiving film data between lambdas.
+
+Parameters:
+  FilmQueueName:
+    Type: String
+    Default: FilmQueue.fifo
+
+Resources:
+ FilmQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: !Ref FilmQueueName
+      FifoQueue: true
