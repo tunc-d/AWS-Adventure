@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: An AWS Serverless Specification template describing your function.
+Description: Lambda function which receives a message from an SQS queue, does some data processing and saves the resulting JSON to an S3 bucket.
 Resources:
   enrichmovies:
     Type: 'AWS::Serverless::Function'
