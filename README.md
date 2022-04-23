@@ -32,7 +32,6 @@ Adding cat picture for distraction.
 * We'll use the film data to pull some extra info from the omdbapi and do some simple data processing - I haven't been too robust with handling data inconsistencies as they were out of scope.
 * Finally, we'll convert the film data into a single JSON and write it to an S3 bucket. Since the bucket has versioning, the filename is hardcoded.
 
-
 ### **Things I'd do differently if I had more time**
 I've tried not to spend too long on this, so I've knowingly taken some shortcuts. I'll list them here so you know about the 'mistakes' that I'm aware of.
 
@@ -42,3 +41,4 @@ I've tried not to spend too long on this, so I've knowingly taken some shortcuts
 * Include role/permission specifications in the CloudFormation template - currently pointing to my arn which is likely inaccessible to you. I have created custom policies for my roles, using the principle of least privilege. 
 * Wasn't sure about the "Private key handling" bonus point. I have placed some restrictions on bucket access, but I'm not convinced this is what you're looking for.
 * Didn't look too much into how code should be stored for Lambda CloudFormation templates. Dumped them into an S3 bucket for now.
+* Remind myself about python best practices.. 
