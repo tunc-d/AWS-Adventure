@@ -21,13 +21,13 @@ Adding cat picture for distraction.
 
 ## **Project Overview**
 
-###1- Get Data
+##1- Get Data
 * Driven by an EventBridge event that triggers daily (no time-of-day specified)
 * This daily event will trigger a lambda function which runs **get_data.py**
 * The script will pull JSON data containing a list of 250 films. Working on the assumption that the JSON will start at film rank 1 and increase incrementally, we can select the first 10 lines for the top 10 films.
 * The 10 lines will be sent over to an SQS queue in their entirety.
 
-###2- Enrich & Store
+##2- Enrich & Store
 * Lambda triggered by a message arriving in SQS queue, which will run **enrich_and_store.py**
 * We'll use the film data to pull some extra info from the omdbapi and do some simple data processing - I haven't been too robust with handling data inconsistencies as they were out of scope.
 * Finally, we'll convert the film data into a single JSON and write it to an S3 bucket. Since the bucket has versioning, the filename is hardcoded.
